@@ -1,0 +1,265 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="314dp"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.03"
+                android:gravity="center_horizontal"
+                android:text="Totall Steps"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Steps Taken Today"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/totalstep"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.09"
+                android:gravity="center_horizontal"
+                android:text="---"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/currentstep"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.69"
+                android:gravity="center_horizontal"
+                android:hint="0"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.51"
+            android:gravity="center"
+            android:text="Distance (km)" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Calorie Burnt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/Distance"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="km"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Calorie"
+                android:layout_width="186dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp" >
+
+            <TextView
+                android:id="@+id/steplength"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:text="Step Length"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/step_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.46"
+                android:gravity="center"
+                android:hint="cm" >
+</EditText>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:text="Weight"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+             <EditText 
+                    android:id="@+id/weight_kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.59"
+                android:gravity="center"
+                android:hint="kg"
+                    ></EditText>
+
+
+            <Button
+                android:id="@+id/saveuserdata"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:onClick="run"
+                
+                 />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#" 
+            android:paddingLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/stepdb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steps" 
+            android:paddingLeft="15dp"
+            
+            />
+
+        <TextView
+            android:id="@+id/caloriedb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calories"
+            android:paddingLeft="15dp"
+             />
+
+        <TextView
+            android:id="@+id/datedb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date" 
+            android:paddingLeft="15dp"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/datarecordlist"
+        android:layout_width="wrap_content"
+        android:layout_height="132dp" >
+    </ListView>
+    
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/addrecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.75"
+                    android:onClick="onClick_AddTask"
+                    android:text="Add"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/Delete"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_weight="0.33"
+                    android:freezesText="true"
+                    android:onClick="onClick_DeleteTasks"
+                    android:text="Clear the record"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+    
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+
+
+ <com.jjoe64.graphview.GraphView
+     android:id="@+id/graph"
+     android:layout_width="match_parent"
+     android:layout_height="180dp" />
+
+ <com.jjoe64.graphview.GraphView
+     android:id="@+id/graph2"
+     android:layout_width="match_parent"
+     android:layout_height="200dip" />
+
+          </LinearLayout>
+            
+        </ScrollView>
+  
+</LinearLayout>

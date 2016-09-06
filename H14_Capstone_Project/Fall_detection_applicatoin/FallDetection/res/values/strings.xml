@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fall Detector</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_sms_message_">"Enter SMS Message : "</string>
+    <string name="enter_phone_number_">"Enter Phone Number : "</string>
+    <string name="send">Send</string>
+    <string name="scan">scan</string>
+    
+
+</resources>
